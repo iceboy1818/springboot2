@@ -15,12 +15,8 @@ spring:
     gateway:
       discovery:
         locator:
-          lowerCaseServiceId: true
+          enabled: true
       routes:
-      - id: product-service
-        uri: lb://product-service
-        predicates:
-        - Path=/product/**
       - id: employee-service
         uri: lb://employee-service
         predicates:
