@@ -17,8 +17,8 @@ spring:
         locator:
           lowerCaseServiceId: true
       routes:
-      - id:  product-service
-        uri: http://localhost:4444/products/1
+      - id:  product
+        uri: lb://product
         predicates:
         - Path=/product/**
       - id: employee-service
