@@ -17,6 +17,10 @@ spring:
         locator:
           lowerCaseServiceId: true
       routes:
+      - id:  product-service
+        uri: lb://product-service
+        predicates:
+        - Path=/product/**
       - id: employee-service
         uri: lb://employee-service
         predicates:
